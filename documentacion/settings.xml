@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!-- <localRepository>{Cuando se desea usar un repositorio en una ruta diferente en local}</localRepository> -->
+
+    
+    
+    
+
+<!-- Si se requiere usar proxy agregar aquí los datos -->
+    <proxies>
+        <proxy>
+            <active>false</active>
+            <protocol>http</protocol>
+            <host>150.100.210.40</host>
+            <port>8080</port>
+            <username></username>
+            <password></password>
+            <nonProxyHosts></nonProxyHosts>
+        </proxy>
+    </proxies>
+
+    <profiles>
+        <profile>
+            <id>mvnrepository</id>
+	        <repositories>
+	            <repository>
+	                <id>mvnrepository</id>
+	                <name>mvnrepository</name>
+	                <url>http://www.mvnrepository.com</url>
+	            </repository>
+	        </repositories>
+    	</profile>
+       
+
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>mvnrepository</activeProfile>
+        
+    </activeProfiles>
+
+</settings>

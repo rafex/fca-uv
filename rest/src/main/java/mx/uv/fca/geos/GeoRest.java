@@ -17,6 +17,7 @@ public class GeoRest {
     public static void getListadoEstados() {
         get(GeoUrlEnum.PAISES.getValor(), (request, response) -> {
 
+            // Aquí debera ir México
             return "{\"algo\":\"valor\"}";
         });
     }

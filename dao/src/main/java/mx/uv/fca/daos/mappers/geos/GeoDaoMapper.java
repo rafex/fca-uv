@@ -1,7 +1,6 @@
 package mx.uv.fca.daos.mappers.geos;
 
-import mx.uv.fca.daos.dtos.geos.Estados;
-import mx.uv.fca.utilidades.identificadores.Identificador;
+import mx.uv.fca.daos.entidades.geos.EstadoEntidad;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,35 +12,34 @@ import java.util.List;
  */
 public class GeoDaoMapper {
 
-    public static List<Estados> mapEstados(final ResultSet resultSet) {
+    public static List<EstadoEntidad> mapTo(final ResultSet from) {
 
-        final List<Estados> estados = new ArrayList<Estados>();
+        final List<EstadoEntidad> to = new ArrayList<EstadoEntidad>();
 
         try {
-            while (resultSet.next()) {
-                final Estados estado = mapEstado(resultSet);
+            while (from.next()) {
+                final EstadoEntidad estado = mapEstado(from);
                 if (estado != null)
-                    estados.add(estado);
+                    to.add(estado);
 
             }
         } catch (final SQLException e) {
             e.printStackTrace();
         }
 
-        return estados;
+        return to;
     }
 
-    public static Estados mapEstado(final ResultSet resultSet) {
-        Estados estado = null;
+    public static EstadoEntidad mapEstado(final ResultSet from) {
+        EstadoEntidad estado = null;
         try {
-            final Integer id = resultSet.getInt("id");
-            final String nombre = resultSet.getString("nombre");
-            final String abreviacion = resultSet.getString("nombre");
-            estado = new Estados();
+            final Integer id = from.getInt("id");
+            final String nombre = from.getString("nombre");
+            final String abreviacion = from.getString("nombre");
+            estado = new EstadoEntidad();
 
-            Identificador identificador = new Identificador("estado",id.toString());
 
-            estado.setId(identificador);
+            estado.setId(id);
             estado.setNombre(nombre);
             estado.setAbreviacion(abreviacion);
 

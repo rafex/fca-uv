@@ -1,9 +1,10 @@
 package mx.uv.fca.daos.api.geos;
 
-import mx.uv.fca.daos.dtos.geos.Estados;
+import mx.uv.fca.daos.dtos.geos.ListadoEstadosDaoOutDto;
+import mx.uv.fca.daos.entidades.geos.EstadoEntidad;
 import mx.uv.fca.daos.mappers.geos.GeoDaoMapper;
-import mx.uv.fca.enums.JDBCEnum;
-import mx.uv.fca.utilidades.sql.UtilidadSQL;
+import mx.uv.fca.core.enums.JDBCEnum;
+import mx.uv.fca.core.utilidades.sql.UtilidadSQL;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,11 +22,11 @@ public class GeoDao {
 
         utilSql = new UtilidadSQL(JDBCEnum.MARIADB, BD);
 
-        final ListadoEstadosDaoOutDto listadoPaisesDaoOutDto = new ListadoEstadosDaoOutDto(new ArrayList<Estados>());
+        final ListadoEstadosDaoOutDto listadoPaisesDaoOutDto = new ListadoEstadosDaoOutDto(new ArrayList<EstadoEntidad>());
 
         try {
             final ResultSet resultSet = utilSql.query("SELECT * FROM estados");
-            listadoPaisesDaoOutDto.setEstados(GeoDaoMapper.mapEstados(resultSet));
+            listadoPaisesDaoOutDto.setEstados(GeoDaoMapper.mapTo(resultSet));
 
         } catch (final SQLException e) {
             e.printStackTrace();

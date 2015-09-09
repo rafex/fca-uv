@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>mx.uv.fca</groupId>
+    <groupId>mx.uv.fca.modelos</groupId>
     <artifactId>modelos</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -12,14 +12,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
-        <core.version>1.0-SNAPSHOT</core.version>
+        <commons-lang.version>3.3.2</commons-lang.version>
+        <jackson.version>2.5.2</jackson.version>
+        <jackson-jdk8.version>2.5.2</jackson-jdk8.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>mx.uv.fca</groupId>
-            <artifactId>core</artifactId>
-            <version>${core.version}</version>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
+            <version>${jackson-jdk8.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

@@ -8,14 +8,14 @@ import static spark.Spark.get;
 public class GeoRest {
 
     public static void getListadoPaises() {
-        get(GeoUrlEnum.PAISES.getValor(), (request, response) -> {
+        get(GeoUrlEnum.ESTADOS.getValor(), (request, response) -> {
 
             return null;
         });
     }
 
     public static void getListadoEstados() {
-        get(GeoUrlEnum.PAISES.getValor(), (request, response) -> {
+        get(GeoUrlEnum.ESTADOS.getValor(), (request, response) -> {
 
             // Aquí debera ir México
             return "{\"algo\":\"valor\"}";
@@ -26,7 +26,7 @@ public class GeoRest {
 
     public enum GeoUrlEnum {
 
-        PAISES("/paises");
+        ESTADOS("/estados");
 
         private final String valor;
 

@@ -1,7 +1,7 @@
 package mx.uv.fca.test.daos.api.geos;
 
 import mx.uv.fca.daos.api.geos.GeoDao;
-import mx.uv.fca.daos.api.geos.ListadoEstadosDaoOutDto;
+import mx.uv.fca.daos.dtos.geos.ListadoEstadosDaoOutDto;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package mx.uv.fca.test.utilidades.sql;
+package mx.uv.fca.utilidades.sql;
 
 import mx.uv.fca.enums.JDBCEnum;
 import mx.uv.fca.jdbc.JDBCFactory;
@@ -10,7 +10,7 @@ import java.sql.Statement;
 
 public class UtilidadSQL {
 
-    private final Connection conexion;
+    private Connection conexion;
     private Statement declaracion;
     private ResultSet resultado;
 

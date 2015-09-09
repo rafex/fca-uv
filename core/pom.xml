@@ -24,9 +24,15 @@
         <sparkframework.version>2.1</sparkframework.version>
         <mariadb.version>1.1.8</mariadb.version>
         <silk.version>0.6</silk.version>
+        <ehcache.version>2.10.0</ehcache.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ehcache.version}</version>
+        </dependency>
         <dependency>
             <groupId>se.jbee</groupId>
             <artifactId>silk-di</artifactId>

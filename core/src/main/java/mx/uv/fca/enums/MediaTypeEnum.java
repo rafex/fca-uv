@@ -1,6 +1,6 @@
 package mx.uv.fca.enums;
 
-import mx.uv.fca.test.utilidades.Constantes;
+import mx.uv.fca.utilidades.Constantes;
 import org.apache.commons.lang3.StringUtils;
 
 public enum MediaTypeEnum {

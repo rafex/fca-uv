@@ -1,6 +1,8 @@
 package mx.uv.fca.test.utilidades.codificacion;
 
 import mx.uv.fca.enums.CodificadorEnum;
+import mx.uv.fca.utilidades.codificacion.Base64;
+import mx.uv.fca.utilidades.codificacion.CodificadorFactory;
 import org.junit.Assert;
 import org.junit.Test;
 

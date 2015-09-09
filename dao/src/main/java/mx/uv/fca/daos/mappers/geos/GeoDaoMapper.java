@@ -1,7 +1,7 @@
 package mx.uv.fca.daos.mappers.geos;
 
 import mx.uv.fca.daos.dtos.geos.Estados;
-import mx.uv.fca.test.utilidades.identificadores.Identificador;
+import mx.uv.fca.utilidades.identificadores.Identificador;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

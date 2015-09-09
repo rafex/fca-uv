@@ -1,7 +1,7 @@
 package mx.uv.fca.main;
 
 import mx.uv.fca.geos.GeoRest;
-import mx.uv.fca.test.utilidades.rest.UtilidadRest;
+import mx.uv.fca.utilidades.rest.UtilidadRest;
 import spark.servlet.SparkApplication;
 
 import static spark.Spark.before;

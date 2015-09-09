@@ -1,4 +1,4 @@
-package mx.uv.fca.test.utilidades.archivos;
+package mx.uv.fca.utilidades.archivos;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -53,12 +53,12 @@ public class UtilidadArchivos {
     }
 
     public static String leerDocumento(final String file) {
-        Path path = Paths.get(file);
+        final Path path = Paths.get(file);
         return leerTodasLasLineas(path).toString();
     }
 
     public static String leerDocumento(final java.io.File file) {
-        Path path = file.toPath();
+        final Path path = file.toPath();
         return leerTodasLasLineas(path).toString();
     }
 

@@ -1,6 +1,6 @@
 package mx.uv.fca.daos.dtos.geos;
 
-import mx.uv.fca.test.utilidades.identificadores.Identificador;
+import mx.uv.fca.utilidades.identificadores.Identificador;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 

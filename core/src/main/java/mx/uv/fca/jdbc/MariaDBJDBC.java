@@ -2,7 +2,7 @@ package mx.uv.fca.jdbc;
 
 
 import mx.uv.fca.enums.JDBCEnum;
-import mx.uv.fca.test.utilidades.configuraciones.UtilidadPropiedades;
+import mx.uv.fca.utilidades.configuraciones.UtilidadPropiedades;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

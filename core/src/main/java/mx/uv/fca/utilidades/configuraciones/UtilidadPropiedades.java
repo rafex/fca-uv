@@ -1,6 +1,6 @@
-package mx.uv.fca.test.utilidades.configuraciones;
+package mx.uv.fca.utilidades.configuraciones;
 
-import mx.uv.fca.test.utilidades.archivos.UtilidadArchivos;
+import mx.uv.fca.utilidades.archivos.UtilidadArchivos;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

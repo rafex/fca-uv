@@ -1,6 +1,6 @@
 package mx.uv.fca.test.utilidades.propiedades;
 
-import mx.uv.fca.test.utilidades.configuraciones.UtilidadPropiedades;
+import mx.uv.fca.utilidades.configuraciones.UtilidadPropiedades;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;

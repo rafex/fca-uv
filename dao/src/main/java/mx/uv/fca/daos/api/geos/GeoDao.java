@@ -3,7 +3,7 @@ package mx.uv.fca.daos.api.geos;
 import mx.uv.fca.daos.dtos.geos.Estados;
 import mx.uv.fca.daos.mappers.geos.GeoDaoMapper;
 import mx.uv.fca.enums.JDBCEnum;
-import mx.uv.fca.test.utilidades.sql.UtilidadSQL;
+import mx.uv.fca.utilidades.sql.UtilidadSQL;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -29,6 +29,15 @@ public class GeoDao {
 
         } catch (final SQLException e) {
             e.printStackTrace();
+        }
+
+        finally {
+            try {
+                if(utilSql != null)
+                    utilSql.cerrar();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
         return listadoPaisesDaoOutDto;

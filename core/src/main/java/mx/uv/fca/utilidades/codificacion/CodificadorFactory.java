@@ -1,4 +1,4 @@
-package mx.uv.fca.test.utilidades.codificacion;
+package mx.uv.fca.utilidades.codificacion;
 
 import mx.uv.fca.enums.CodificadorEnum;
 

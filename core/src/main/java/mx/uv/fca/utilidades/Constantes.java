@@ -1,4 +1,4 @@
-package mx.uv.fca.test.utilidades;
+package mx.uv.fca.utilidades;
 
 /**
  * Created by rafex on 08/09/15.

@@ -1,5 +1,6 @@
-package mx.uv.fca.test.utilidades.json;
+package mx.uv.fca.utilidades.json;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -27,6 +28,14 @@ public class JSONUtils {
         }
 
         return jsonNode;
+    }
+
+    public static Object json(final Object salida) {
+        try {
+            return INSTANCE.writerWithDefaultPrettyPrinter().writeValueAsString(salida);
+        } catch (final JsonProcessingException e) {
+            throw new UnsupportedOperationException("Error al convertir el objeto en JSON : " + e);
+        }
     }
 
 }

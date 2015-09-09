@@ -1,10 +1,11 @@
 package mx.uv.fca.enums;
 
+import mx.uv.fca.test.utilidades.Constantes;
 import org.apache.commons.lang3.StringUtils;
 
 public enum MediaTypeEnum {
 
-    JSON("application/json"), XML("application/xml");
+    JSON(Constantes.APPLICATION_JSON), XML(Constantes.APPLICATION_XML);
 
     private String valor;
 

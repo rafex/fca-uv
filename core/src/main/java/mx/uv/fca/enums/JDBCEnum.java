@@ -1,10 +1,11 @@
 package mx.uv.fca.enums;
 
+import mx.uv.fca.test.utilidades.Constantes;
 import org.apache.commons.lang3.StringUtils;
 
 public enum JDBCEnum {
 
-    SQLITE("org.sqlite.JDBC"), MARIADB("org.mariadb.jdbc.Driver");
+    SQLITE(Constantes.CLASS_NAME_SQLITE_JDBC), MARIADB(Constantes.CLASS_NAME_MARIADB_JDBC);
 
     private String valor;
 

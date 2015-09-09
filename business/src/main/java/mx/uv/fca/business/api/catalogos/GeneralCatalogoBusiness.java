@@ -8,7 +8,7 @@ import mx.uv.fca.daos.dtos.geos.ListadoEstadosDaoOutDto;
 /**
  * Created by rafex on 09/09/15.
  */
-public class GeneralCatalogo {
+public class GeneralCatalogoBusiness {
 
     public static ListadoEstadosBusinessOutDto estados(){
         final ListadoEstadosDaoOutDto listadoEstados = GeoDao.getListadoEstados();

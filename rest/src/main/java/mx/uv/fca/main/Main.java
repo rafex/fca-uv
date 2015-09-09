@@ -1,7 +1,7 @@
 package mx.uv.fca.main;
 
-import mx.uv.fca.geos.GeoRest;
 import mx.uv.fca.core.utilidades.rest.UtilidadRest;
+import mx.uv.fca.rest.api.catalogos.GeneralCatalogoRest;
 import spark.servlet.SparkApplication;
 
 import static spark.Spark.before;
@@ -18,8 +18,7 @@ public class Main implements SparkApplication {
             UtilidadRest.setApplicationType(request, response);
         });
 
-        GeoRest.getListadoEstados();
-
+        GeneralCatalogoRest.getListadoEstados();
     }
 
 }

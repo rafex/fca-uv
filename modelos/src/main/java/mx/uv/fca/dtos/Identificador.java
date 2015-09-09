@@ -15,7 +15,7 @@ public class Identificador {
     private String idInterno;
 
     public Identificador(String id, String idInterno) {
-        this.id = id + UUID.randomUUID().toString();
+        this.id = id + "-" + UUID.randomUUID().toString();
         this.idInterno = idInterno;
     }
 

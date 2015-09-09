@@ -14,9 +14,15 @@
         <sparkframework.version>2.1</sparkframework.version>
         <junit.version>4.12</junit.version>
         <core.version>1.0-SNAPSHOT</core.version>
+        <business.version>1.0-SNAPSHOT</business.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>mx.uv.fca.business</groupId>
+            <artifactId>business</artifactId>
+            <version>${business.version}</version>
+        </dependency>
         <dependency>
             <groupId>mx.uv.fca.core</groupId>
             <artifactId>core</artifactId>

@@ -17,6 +17,16 @@ USE `fca_uv`;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+CREATE TABLE `fca_uv`.`usuarios` (
+  `id` INT NOT NULL COMMENT '',
+  `nick` VARCHAR(45) NOT NULL COMMENT '',
+  `status` VARCHAR(5) NULL COMMENT '',
+  `password` BLOB NOT NULL COMMENT '',
+  PRIMARY KEY (`id`, `nick`)  COMMENT '',
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC)  COMMENT '');
+
+
 --
 -- Table structure for table `estados`
 --

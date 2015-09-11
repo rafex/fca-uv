@@ -23,9 +23,33 @@ public class UtilidadPropiedades {
             throw new NullPointerException();
 
         final Properties propiedades = obtenerTodas();
-        final String valorPropiedad = StringUtils.defaultString(propiedades.getProperty(propiedad));
+        final String valorPropiedad = StringUtils.defaultString(propiedades.getProperty(propiedad), null);
 
         return valorPropiedad;
+    }
+
+    public static Boolean obtenerBooleano(String propiedad) {
+        String propiedadEncotrada = obtener(propiedad);
+        Boolean propiedadBoolean = null;
+        if (propiedadEncotrada != null && (propiedadEncotrada.equalsIgnoreCase("FALSE") || propiedadEncotrada.equalsIgnoreCase("TRUE"))) {
+            propiedadBoolean = Boolean.valueOf(propiedadEncotrada);
+        }
+        return propiedadBoolean;
+    }
+
+    public static Integer obtenerEntero(String propiedad) {
+        String propiedadEncotrada = obtener(propiedad);
+        Integer propiedadEntero = null;
+        if(propiedadEncotrada != null) {
+            try {
+                propiedadEntero = Integer.parseInt(propiedadEncotrada.replace(" ", "").trim());
+                return propiedadEntero;
+            } catch (final Exception e) {
+                // e.printStackTrace();
+            }
+
+        }
+        return propiedadEntero;
     }
 
     public static Properties obtenerTodas() {
@@ -41,7 +65,6 @@ public class UtilidadPropiedades {
                 errorObtenerPropiedades(e);
             }
         }
-
 
         return propiedades;
     }

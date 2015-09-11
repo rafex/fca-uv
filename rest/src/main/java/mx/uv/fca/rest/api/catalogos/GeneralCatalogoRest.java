@@ -16,9 +16,7 @@ public class GeneralCatalogoRest {
 
     public static void getListadoEstados() {
         get(ESTADOS_URL, (request, response) -> {
-
             ListadoEstadosBusinessOutDto salida = GeneralCatalogoBusiness.estados();
-
             return UtilidadRest.generarSalida(request, salida);
         });
     }

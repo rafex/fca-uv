@@ -14,7 +14,7 @@ public class JSONUtils {
 
     private static final ObjectMapper INSTANCE = new ObjectMapper();
 
-    public static ObjectMapper createObjectMapper() {
+    public static ObjectMapper getObjectMapper() {
         INSTANCE.registerModule(new Jdk8Module());
         INSTANCE.configure(SerializationFeature.INDENT_OUTPUT, true);
         INSTANCE.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);

@@ -11,8 +11,8 @@ import mx.uv.fca.daos.dtos.geos.ListadoEstadosDaoOutDto;
 public class GeneralCatalogoBusiness {
 
     public static ListadoEstadosBusinessOutDto estados(){
-        final ListadoEstadosDaoOutDto listadoEstados = GeoDao.getListadoEstados();
-        return new ListadoEstadosBusinessOutDto(EstadoMapper.mapTo(listadoEstados.getEstados()));
+        final ListadoEstadosDaoOutDto dtoSalida = GeoDao.getListadoEstados();
+        return new ListadoEstadosBusinessOutDto(EstadoMapper.mapTo(dtoSalida.getEstados()));
     }
 
 }

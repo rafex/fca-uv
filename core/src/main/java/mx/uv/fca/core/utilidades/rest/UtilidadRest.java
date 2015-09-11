@@ -7,6 +7,8 @@ import mx.uv.fca.core.utilidades.xml.XMLUtils;
 import spark.Request;
 import spark.Response;
 
+import java.io.IOException;
+
 public class UtilidadRest {
 
     public static Boolean isApplicationJson(final Request request) {
@@ -29,12 +31,27 @@ public class UtilidadRest {
 
         if (salida instanceof String)
             return JSONUtils.json(salida);
-        else if (!isApplicationJson(request))
+        else if (isApplicationJson(request))
             return JSONUtils.json(salida);
         else
            return XMLUtils.xml(salida);
 
     }
 
+    public static <T> T leerBody(Request request,Class<T> clazz){
+        T returnType = null;
+
+        if(request == null && request.bodyAsBytes()== null)
+            return returnType;
+
+        try {
+            byte[] body = request.bodyAsBytes();
+            returnType = JSONUtils.deJsonAJava(body,clazz);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return returnType;
+    }
 
 }

@@ -1,6 +1,8 @@
 package mx.uv.fca.core.utilidades.json;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -36,6 +38,12 @@ public class JSONUtils {
         } catch (final JsonProcessingException e) {
             throw new UnsupportedOperationException("Error al convertir el objeto en JSON : " + e);
         }
+    }
+
+    public static <T> T deJsonAJava(byte[] json, Class<T> type) throws JsonParseException, JsonMappingException, IOException {
+        T returnType = null;
+        returnType = (T) INSTANCE.readValue(json, type);
+        return returnType;
     }
 
 }

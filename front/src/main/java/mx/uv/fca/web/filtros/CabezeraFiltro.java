@@ -28,9 +28,9 @@ public class CabezeraFiltro implements Filter {
 
             if (response instanceof HttpServletResponse) {
                 HttpServletResponse httpServletResponse = (HttpServletResponse) response;
-                httpServletResponse.setHeader("Access-Control-Allow-Origin","http://localhost:8888");
+                /*httpServletResponse.setHeader("Access-Control-Allow-Origin","http://localhost:8888");
                 httpServletResponse.setHeader("Access-Control-Allow-Methods","POST, GET, PUT, DELETE, OPTIONS");
-                httpServletResponse.setHeader("Access-Control-Allow-Headers","X-Requested-With");
+                httpServletResponse.setHeader("Access-Control-Allow-Headers","X-Requested-With");*/
             }
             filter.doFilter(request, response);
         }

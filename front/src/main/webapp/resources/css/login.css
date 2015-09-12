@@ -1,5 +1,5 @@
-	@import url(css?family=Exo:100,200,400);
-      @import url(css?family=Source+Sans+Pro:700,400,300);
+@import url(exo);
+@import url(sans);
       body{
       margin: 0;
       padding: 0;

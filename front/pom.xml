@@ -25,6 +25,7 @@
         <jackson-jdk8.version>2.5.2</jackson-jdk8.version>
 
         <core.version>1.0-SNAPSHOT</core.version>
+        <modelos.version>1.0-SNAPSHOT</modelos.version>
     </properties>
 
     <dependencies>
@@ -32,6 +33,11 @@
             <groupId>mx.uv.fca.core</groupId>
             <artifactId>core</artifactId>
             <version>${core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mx.uv.fca.modelos</groupId>
+            <artifactId>modelos</artifactId>
+            <version>${modelos.version}</version>
         </dependency>
 
         <dependency>

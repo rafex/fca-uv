@@ -48,15 +48,16 @@ public class ResponseDto implements Serializable {
 		return this.returnValue;
 	}
 
-	public Object getReturnValue(final Class<?> returnType) {
+	public <T> T getReturnValue(final Class<T> clazz) {
+		T returnType = null;
 		try {
-			if ((this.body != null) && (returnType != null)) {
-				return objectMapper.readValue(new String(this.body, "UTF-8"), returnType);
+			if ((this.body != null) && (clazz != null)) {
+				returnType = objectMapper.readValue(new String(this.body, "UTF-8"), clazz);
 			}
 		} catch (final IOException e) {
 			e.printStackTrace();
 		}
-		return null;
+		return returnType;
 	}
 
 	public Map<String, List<String>> getHeader() {

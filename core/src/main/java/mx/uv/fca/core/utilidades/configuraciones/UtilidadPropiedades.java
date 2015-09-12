@@ -22,7 +22,7 @@ public class UtilidadPropiedades {
         if (StringUtils.isBlank(propiedad))
             throw new NullPointerException();
 
-        final Properties propiedades = obtenerTodas();
+        final Properties propiedades = obtenerPropiedades();
         final String valorPropiedad = StringUtils.defaultString(propiedades.getProperty(propiedad), null);
 
         return valorPropiedad;
@@ -52,11 +52,17 @@ public class UtilidadPropiedades {
         return propiedadEntero;
     }
 
-    public static Properties obtenerTodas() {
+    public static Properties obtenerPropiedades() {
 
+        final Properties propiedades = obtenerPropiedades(PATH_PROPIEDADES);
+
+        return propiedades;
+    }
+
+    public static Properties obtenerPropiedades(String ruta) {
         final Properties propiedades = new Properties();
 
-        final InputStream is = UtilidadArchivos.classLoader(PATH_PROPIEDADES);
+        final InputStream is = UtilidadArchivos.classLoader(ruta);
 
         if (is != null) {
             try {
@@ -65,7 +71,6 @@ public class UtilidadPropiedades {
                 errorObtenerPropiedades(e);
             }
         }
-
         return propiedades;
     }
 

@@ -3,7 +3,7 @@ package mx.uv.fca.core.dtos;
 public class ProxyDto {
 
 	private final String host;
-	private final String port;
+	private final Integer port;
 	private final AuthenticationProxyDto authentication;
 
 	private ProxyDto(final ProxyBuilder proxybuilder) {
@@ -16,11 +16,7 @@ public class ProxyDto {
 		return this.host;
 	}
 
-	public Integer getPortInt() {
-		return Integer.parseInt(this.port);
-	}
-
-	public String getPort() {
+	public Integer getPort() {
 		return this.port;
 	}
 
@@ -43,10 +39,10 @@ public class ProxyDto {
 
 	public static class ProxyBuilder {
 		private final String host;
-		private final String port;
+		private final Integer port;
 		private AuthenticationProxyDto authentication;
 
-		public ProxyBuilder(final String host, final String port) {
+		public ProxyBuilder(final String host, final Integer port) {
 			this.port = port;
 			this.host = host;
 		}

@@ -21,7 +21,7 @@ public class PropiedadesTest {
     @Test
     public void obtenerTodasLasPropiedad() {
 
-        final Properties obtenerTodas = UtilidadPropiedades.obtenerTodas();
+        final Properties obtenerTodas = UtilidadPropiedades.obtenerPropiedades();
 
         Assert.assertNotNull(obtenerTodas);
         Assert.assertFalse(obtenerTodas.isEmpty());

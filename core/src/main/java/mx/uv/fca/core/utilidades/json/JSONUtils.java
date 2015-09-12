@@ -32,7 +32,7 @@ public class JSONUtils {
         return jsonNode;
     }
 
-    public static Object json(final Object salida) {
+    public static String json(final Object salida) {
         try {
             return INSTANCE.writerWithDefaultPrettyPrinter().writeValueAsString(salida);
         } catch (final JsonProcessingException e) {

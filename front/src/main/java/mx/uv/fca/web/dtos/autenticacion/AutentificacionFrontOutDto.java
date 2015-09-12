@@ -1,20 +1,16 @@
-package mx.uv.fca.business.dtos.login;
+package mx.uv.fca.web.dtos.autenticacion;
 
 import mx.uv.fca.dtos.aplicaciones.Aplicacion;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by rafex on 10/09/15.
+ * Created by rafex on 11/09/15.
  */
-@XmlRootElement(name = "autenticacion")
-@XmlType(name = "autenticacion")
-public class AutenticacionBusinessOutDto implements Serializable {
+public class AutentificacionFrontOutDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -52,7 +48,7 @@ public class AutenticacionBusinessOutDto implements Serializable {
 
         if (o == null || getClass() != o.getClass()) return false;
 
-        AutenticacionBusinessOutDto that = (AutenticacionBusinessOutDto) o;
+        AutentificacionFrontOutDto that = (AutentificacionFrontOutDto) o;
 
         return new EqualsBuilder()
                 .append(key, that.key)
@@ -72,7 +68,7 @@ public class AutenticacionBusinessOutDto implements Serializable {
 
     @Override
     public String toString() {
-        return "AutenticacionBusinessOutDto{" +
+        return "AutentificacionFrontOutDto{" +
                 "key='" + key + '\'' +
                 ", esValida=" + esValida +
                 ", aplicaciones=" + aplicaciones +

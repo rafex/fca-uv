@@ -34,12 +34,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="UTF-8">
     <title>Sistemas de la Facultad de Contaduría y Administración de Xalapa - Universidad Veracruzana</title>
 
+    <c:redirect url="login.jsp"/>
     <spring:url value="/resources/" var="path" />
     <link rel="stylesheet" href="${path}css/login.css"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="${path}js/html5shiv.js"></script>
+    <script src="${path}js/respond.min.js"></script>
+    <script src="${path}js/lte-ie7.js"></script>
+    <![endif]-->
 
-    <%--<link rel="stylesheet" media="screen" href="<%=cssPath%>/main.css" />
-    <link rel="stylesheet" media="screen" href="<%=cssPath%>/usuarios.css" />
-    <link rel="icon" type="image/x-icon" href="<%=imgPath%>/favicon.ico">--%>
+    <%--<link rel="icon" type="image/x-icon" href="<%=imgPath%>/favicon.ico">--%>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,7 +63,9 @@
 
 </head>
 <body id="bodyPage">
-    <div id="container"></div>
+    <div id="containerInit">
+        <div id="init"></div>
+    </div>
 
     <script type="text/javascript" src="${path}js/login.js"></script>
 </body>

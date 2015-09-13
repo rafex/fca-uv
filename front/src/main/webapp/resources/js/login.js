@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $( "#container" ).load( staticPath + "html/login.html" );
+    $( "#init" ).load( staticPath + "html/login.html" );
 });
 
 function login(){
@@ -12,7 +12,7 @@ function login(){
         $.ajax({
             crossDomain: false,
             type: "POST",
-            url: 'http://localhost:8080/front/publico/autenticacion',
+            url: 'http://localhost:8080/fca/publico/autenticacion',
             data: JSON.stringify(json),
             beforeSend: function(xhr) {
                 xhr.withCredentials = true;
@@ -20,6 +20,8 @@ function login(){
                 xhr.setRequestHeader("Content-Type", "application/json");
             },
             success: function(data){
+                //$( "#init" ).load( "privado/panel.jsp" );
+                window.location.replace("privado/panel.jsp?key=" + data.key);
             }
         });
 

@@ -22,6 +22,7 @@ public class AutenticacionBusiness {
         aplicaciones.add(aplicacion);
         dtoSalida.setAplicaciones(aplicaciones);
 
+        dtoSalida.setKey("890sf890s890fd890sf890sf890fsd890f");
 
         return dtoSalida;
     }

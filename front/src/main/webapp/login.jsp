@@ -12,30 +12,14 @@
 <!--<![endif]-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="false"%>
 
-<%
-  /*    JspProperties jspProps = (JspProperties) application.getAttribute(ApplicationScopeAttributes.JSP_PROPS_BEAN);
-
-      String staticPath = jspProps.getStaticPath() + "/app";
-      String dynamicPath = jspProps.getDynPath();
-      String componentsPath = jspProps.getStaticPath() + "/app/components";
-      String cssPath = jspProps.getStaticPath() + "/app/styles";
-      String jsPath = jspProps.getStaticPath()+"/app/scripts";
-      String imgPath = jspProps.getStaticPath()+"/app/images";
-      String allowConsole = ""+jspProps.isAllowConsole();
-
-      ApplicationProperties appProps = (ApplicationProperties) application.getAttribute(ApplicationScopeAttributes.APP_PROPS_BEAN);
-
-      long sessionTime = appProps.getSessionTimeInSeconds() * 1000;
-      long sessionTimeoutWarningTime = appProps.getSessionTimeoutWarningInSeconds() * 1000;
-      long timeBetweenSessionTimeoutChecks = appProps.getTimeBetweenSessionTimeoutChecksInSeconds() * 1000;
-      String logoutRedirectUrl = appProps.getLogoutRedirectUrl();*/
-%>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistemas de la Facultad de Contaduría y Administración de Xalapa - Universidad Veracruzana</title>
 
   <spring:url value="/resources/" var="path" />
   <link rel="stylesheet" href="${path}css/login.css"/>
+  <%--<link rel="stylesheet" href="${path}jquery.mobile-1.4.5/jquery.mobile-1.4.5.css"/>--%>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
   <!--[if lt IE 9]>
   <script src="${path}js/html5shiv.js"></script>
@@ -53,6 +37,7 @@
 
   <!-- librerias -->
   <script type="text/javascript" src="${path}js/jquery.js"></script>
+  <%--<script type="text/javascript" src="${path}jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>--%>
   <script type="text/javascript" src="${path}js/prefixfree.min.js"></script>
 
   <script type="text/javascript">

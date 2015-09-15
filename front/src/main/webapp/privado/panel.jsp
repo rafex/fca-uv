@@ -12,26 +12,9 @@
 <!--<![endif]-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="false"%>
 
-<%
-  /*    JspProperties jspProps = (JspProperties) application.getAttribute(ApplicationScopeAttributes.JSP_PROPS_BEAN);
-
-      String staticPath = jspProps.getStaticPath() + "/app";
-      String dynamicPath = jspProps.getDynPath();
-      String componentsPath = jspProps.getStaticPath() + "/app/components";
-      String cssPath = jspProps.getStaticPath() + "/app/styles";
-      String jsPath = jspProps.getStaticPath()+"/app/scripts";
-      String imgPath = jspProps.getStaticPath()+"/app/images";
-      String allowConsole = ""+jspProps.isAllowConsole();
-
-      ApplicationProperties appProps = (ApplicationProperties) application.getAttribute(ApplicationScopeAttributes.APP_PROPS_BEAN);
-
-      long sessionTime = appProps.getSessionTimeInSeconds() * 1000;
-      long sessionTimeoutWarningTime = appProps.getSessionTimeoutWarningInSeconds() * 1000;
-      long timeBetweenSessionTimeoutChecks = appProps.getTimeBetweenSessionTimeoutChecksInSeconds() * 1000;
-      String logoutRedirectUrl = appProps.getLogoutRedirectUrl();*/
-%>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistemas de la Facultad de Contaduría y Administración de Xalapa - Universidad Veracruzana</title>
 
   <spring:url value="/resources/" var="path" />
@@ -134,16 +117,16 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+      <a id="nombreSistema" href="#" class="logo">Sistemas <span class="lite">FCA</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
         <!--  search form start -->
         <ul class="nav top-menu">
           <li>
-            <form class="navbar-form">
+            <%--<form class="navbar-form">
               <input class="form-control" placeholder="Search" type="text">
-            </form>
+            </form>--%>
           </li>
         </ul>
         <!--  search form end -->
@@ -395,75 +378,19 @@
       <div id="sidebar"  class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" href="index.html">
+          <li class="sub">
+            <a class="" href="#">
               <i class="icon_house_alt"></i>
-              <span>Dashboard</span>
+              <span>Panel</span>
             </a>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
+          <li>
+            <a class="" href="#">
               <i class="icon_document_alt"></i>
-              <span>Forms</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="form_component.html">Form Elements</a></li>
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-              <i class="icon_desktop"></i>
-              <span>UI Fitures</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="general.html">Elements</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
-            </ul>
-          </li>
-          <li>
-            <a class="" href="widgets.html">
-              <i class="icon_genius"></i>
-              <span>Widgets</span>
-            </a>
-          </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
-              <i class="icon_piechart"></i>
-              <span>Charts</span>
+              <span>SISSA</span>
 
             </a>
-
           </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-              <i class="icon_table"></i>
-              <span>Tables</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
-            </ul>
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-              <i class="icon_documents_alt"></i>
-              <span>Pages</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
-            </ul>
-          </li>
-
         </ul>
         <!-- sidebar menu end-->
       </div>
@@ -476,7 +403,7 @@
         <!--overview start-->
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
+            <h3 class="page-header"><i class="fa fa-laptop"></i> <script>document.write("sdfsf");</script></h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="fa fa-laptop"></i>Dashboard</li>
@@ -1116,8 +1043,6 @@
 
 
   <script>
-
-//    $("#avatar").attr("src", staticPath + "img/avatar-mini.jpg");
 
     //knob
     $(function() {

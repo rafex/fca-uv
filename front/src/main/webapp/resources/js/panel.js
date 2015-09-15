@@ -210,3 +210,14 @@ $(function () {
 
     
 });
+
+
+$( document ).ready(function() {
+    //$( "#init" ).load( staticPath + "html/login.html" );
+    //$("#avatar").attr("src", staticPath + "img/avatar-mini.jpg");
+    //$(".username").text("Rafex");
+});
+
+var nombreSistema = "Prueba de Sistema";
+$(".username").text("Rafex");
+//$("i.fa.fa-laptop").text("Sistema");
